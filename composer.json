@@ -1,5 +1,5 @@
 {
-    "name": "league/flysystem",
+    "name": "technosun/flysystem",
     "type": "library",
     "description": "Filesystem abstraction: Many filesystems, one API.",
     "keywords": [
