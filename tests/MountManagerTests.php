@@ -1,12 +1,12 @@
 <?php
 
-use League\Flysystem\Adapter\Local;
-use League\Flysystem\AdapterInterface;
-use League\Flysystem\Filesystem;
-use League\Flysystem\FilesystemInterface;
-use League\Flysystem\MountManager;
-use League\Flysystem\Plugin\ListWith;
-use League\Flysystem\Stub\FilesystemSpy;
+use TSLeague\Flysystem\Adapter\Local;
+use TSLeague\Flysystem\AdapterInterface;
+use TSLeague\Flysystem\Filesystem;
+use TSLeague\Flysystem\FilesystemInterface;
+use TSLeague\Flysystem\MountManager;
+use TSLeague\Flysystem\Plugin\ListWith;
+use TSLeague\Flysystem\Stub\FilesystemSpy;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 
@@ -65,8 +65,8 @@ class MountManagerTests extends TestCase
     public function testCopyBetweenFilesystems()
     {
         $manager = new MountManager();
-        $fs1 = $this->prophesize('League\Flysystem\FilesystemInterface');
-        $fs2 = $this->prophesize('League\Flysystem\FilesystemInterface');
+        $fs1 = $this->prophesize('TSLeague\Flysystem\FilesystemInterface');
+        $fs2 = $this->prophesize('TSLeague\Flysystem\FilesystemInterface');
         $manager->mountFilesystem('fs1', $fs1->reveal());
         $manager->mountFilesystem('fs2', $fs2->reveal());
 
@@ -99,8 +99,8 @@ class MountManagerTests extends TestCase
     public function testMoveBetweenFilesystemsCanFail()
     {
         $manager = new MountManager();
-        $fs1 = $this->prophesize('League\Flysystem\FilesystemInterface');
-        $fs2 = $this->prophesize('League\Flysystem\FilesystemInterface');
+        $fs1 = $this->prophesize('TSLeague\Flysystem\FilesystemInterface');
+        $fs2 = $this->prophesize('TSLeague\Flysystem\FilesystemInterface');
         $manager->mountFilesystem('fs1', $fs1->reveal());
         $manager->mountFilesystem('fs2', $fs2->reveal());
 
@@ -115,8 +115,8 @@ class MountManagerTests extends TestCase
     public function testMoveBetweenFilesystemsCanSucceed()
     {
         $manager = new MountManager();
-        $fs1 = $this->prophesize('League\Flysystem\FilesystemInterface');
-        $fs2 = $this->prophesize('League\Flysystem\FilesystemInterface');
+        $fs1 = $this->prophesize('TSLeague\Flysystem\FilesystemInterface');
+        $fs2 = $this->prophesize('TSLeague\Flysystem\FilesystemInterface');
         $manager->mountFilesystem('fs1', $fs1->reveal());
         $manager->mountFilesystem('fs2', $fs2->reveal());
 
@@ -132,7 +132,7 @@ class MountManagerTests extends TestCase
     public function testMoveSameFilesystems()
     {
         $manager = new MountManager();
-        $fs = $this->prophesize('League\Flysystem\FilesystemInterface');
+        $fs = $this->prophesize('TSLeague\Flysystem\FilesystemInterface');
         $manager->mountFilesystem('fs1', $fs->reveal());
 
         $config = ['visibility' => 'private'];
@@ -145,7 +145,7 @@ class MountManagerTests extends TestCase
 
     protected function mockFilesystem()
     {
-        $mock = $this->prophesize('League\Flysystem\FilesystemInterface');
+        $mock = $this->prophesize('TSLeague\Flysystem\FilesystemInterface');
         $mock->listContents(Argument::type('string'), false)->willReturn([
            ['path' => 'path.txt', 'type' => 'file'],
            ['path' => 'dirname/path.txt', 'type' => 'file'],

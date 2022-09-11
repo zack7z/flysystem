@@ -1,10 +1,10 @@
 <?php
 
-namespace League\Flysystem\Adapter;
+namespace TSLeague\Flysystem\Adapter;
 
 use InvalidArgumentException;
-use League\Flysystem\Filesystem;
-use League\Flysystem\Plugin\ListWith;
+use TSLeague\Flysystem\Filesystem;
+use TSLeague\Flysystem\Plugin\ListWith;
 use PHPUnit\Framework\TestCase;
 
 class ListWithTests extends TestCase

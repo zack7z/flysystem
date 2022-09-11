@@ -1,10 +1,10 @@
 <?php
 
-namespace League\Flysystem\Util;
+namespace TSLeague\Flysystem\Util;
 
-use League\MimeTypeDetection\FinfoMimeTypeDetector;
-use League\MimeTypeDetection\GeneratedExtensionToMimeTypeMap;
-use League\MimeTypeDetection\MimeTypeDetector;
+use TSLeague\MimeTypeDetection\FinfoMimeTypeDetector;
+use TSLeague\MimeTypeDetection\GeneratedExtensionToMimeTypeMap;
+use TSLeague\MimeTypeDetection\MimeTypeDetector;
 
 /**
  * @internal

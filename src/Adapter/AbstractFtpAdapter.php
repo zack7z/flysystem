@@ -1,12 +1,12 @@
 <?php
 
-namespace League\Flysystem\Adapter;
+namespace TSLeague\Flysystem\Adapter;
 
 use DateTime;
-use League\Flysystem\AdapterInterface;
-use League\Flysystem\Config;
-use League\Flysystem\NotSupportedException;
-use League\Flysystem\SafeStorage;
+use TSLeague\Flysystem\AdapterInterface;
+use TSLeague\Flysystem\Config;
+use TSLeague\Flysystem\NotSupportedException;
+use TSLeague\Flysystem\SafeStorage;
 use RuntimeException;
 
 abstract class AbstractFtpAdapter extends AbstractAdapter

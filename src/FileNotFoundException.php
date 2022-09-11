@@ -1,6 +1,6 @@
 <?php
 
-namespace League\Flysystem;
+namespace TSLeague\Flysystem;
 
 use Exception as BaseException;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace League\Flysystem\Plugin;
+namespace TSLeague\Flysystem\Plugin;
 
-use League\Flysystem\FileExistsException;
-use League\Flysystem\FileNotFoundException;
+use TSLeague\Flysystem\FileExistsException;
+use TSLeague\Flysystem\FileNotFoundException;
 
 class ForcedCopy extends AbstractPlugin
 {

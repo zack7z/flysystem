@@ -1,8 +1,8 @@
 <?php
 
-namespace League\Flysystem\Adapter;
+namespace TSLeague\Flysystem\Adapter;
 
-use League\Flysystem\Stub\NotSupportingVisibilityStub;
+use TSLeague\Flysystem\Stub\NotSupportingVisibilityStub;
 use PHPUnit\Framework\TestCase;
 
 class NotSupportingVisivilityTests extends TestCase

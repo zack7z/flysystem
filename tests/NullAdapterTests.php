@@ -1,9 +1,9 @@
 <?php
 
-use League\Flysystem\Adapter\NullAdapter;
-use League\Flysystem\Config;
-use League\Flysystem\FileNotFoundException;
-use League\Flysystem\Filesystem;
+use TSLeague\Flysystem\Adapter\NullAdapter;
+use TSLeague\Flysystem\Config;
+use TSLeague\Flysystem\FileNotFoundException;
+use TSLeague\Flysystem\Filesystem;
 use PHPUnit\Framework\TestCase;
 
 class NullAdapterTest extends TestCase

@@ -1,7 +1,7 @@
 <?php
 
 
-use League\Flysystem\Plugin\EmptyDir;
+use TSLeague\Flysystem\Plugin\EmptyDir;
 use PHPUnit\Framework\TestCase;
 
 class EmptyDirPluginTests extends TestCase
@@ -9,7 +9,7 @@ class EmptyDirPluginTests extends TestCase
 
     public function testPlugin()
     {
-        $filesystem = $this->prophesize('League\Flysystem\FilesystemInterface');
+        $filesystem = $this->prophesize('TSLeague\Flysystem\FilesystemInterface');
         $plugin = new EmptyDir();
         $this->assertEquals('emptyDir', $plugin->getMethod());
         $plugin->setFilesystem($filesystem->reveal());

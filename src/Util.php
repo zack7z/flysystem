@@ -1,8 +1,8 @@
 <?php
 
-namespace League\Flysystem;
+namespace TSLeague\Flysystem;
 
-use League\Flysystem\Util\MimeType;
+use TSLeague\Flysystem\Util\MimeType;
 use LogicException;
 
 use function strcmp;

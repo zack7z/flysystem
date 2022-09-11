@@ -1,15 +1,15 @@
 <?php
 
-namespace League\Flysystem\Adapter;
+namespace TSLeague\Flysystem\Adapter;
 
-use League\Flysystem\Adapter\Polyfill\StreamedCopyTrait;
-use League\Flysystem\AdapterInterface;
-use League\Flysystem\Config;
-use League\Flysystem\ConnectionErrorException;
-use League\Flysystem\ConnectionRuntimeException;
-use League\Flysystem\InvalidRootException;
-use League\Flysystem\Util;
-use League\Flysystem\Util\MimeType;
+use TSLeague\Flysystem\Adapter\Polyfill\StreamedCopyTrait;
+use TSLeague\Flysystem\AdapterInterface;
+use TSLeague\Flysystem\Config;
+use TSLeague\Flysystem\ConnectionErrorException;
+use TSLeague\Flysystem\ConnectionRuntimeException;
+use TSLeague\Flysystem\InvalidRootException;
+use TSLeague\Flysystem\Util;
+use TSLeague\Flysystem\Util\MimeType;
 
 use function in_array;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace League\Flysystem\Stub;
+namespace TSLeague\Flysystem\Stub;
 
-use League\Flysystem\Adapter\CanOverwriteFiles;
-use League\Flysystem\AdapterInterface;
-use League\Flysystem\Config;
+use TSLeague\Flysystem\Adapter\CanOverwriteFiles;
+use TSLeague\Flysystem\AdapterInterface;
+use TSLeague\Flysystem\Config;
 
 /**
  * @codeCoverageIgnore

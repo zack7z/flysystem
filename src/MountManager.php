@@ -1,10 +1,10 @@
 <?php
 
-namespace League\Flysystem;
+namespace TSLeague\Flysystem;
 
 use InvalidArgumentException;
-use League\Flysystem\Plugin\PluggableTrait;
-use League\Flysystem\Plugin\PluginNotFoundException;
+use TSLeague\Flysystem\Plugin\PluggableTrait;
+use TSLeague\Flysystem\Plugin\PluginNotFoundException;
 
 /**
  * Class MountManager.

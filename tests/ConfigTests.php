@@ -1,6 +1,6 @@
 <?php
 
-use League\Flysystem\Config;
+use TSLeague\Flysystem\Config;
 use PHPUnit\Framework\TestCase;
 
 class ConfigTests extends TestCase

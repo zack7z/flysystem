@@ -1,7 +1,7 @@
 <?php
 
-use League\Flysystem\AdapterInterface;
-use League\Flysystem\Filesystem;
+use TSLeague\Flysystem\AdapterInterface;
+use TSLeague\Flysystem\Filesystem;
 use PHPUnit\Framework\TestCase;
 
 abstract class FtpIntegrationTestCase extends TestCase

@@ -1,6 +1,6 @@
 <?php
 
-use League\Flysystem\Plugin\ForcedRename;
+use TSLeague\Flysystem\Plugin\ForcedRename;
 use PHPUnit\Framework\TestCase;
 
 class ForcedRenamePluginTests extends TestCase
@@ -11,7 +11,7 @@ class ForcedRenamePluginTests extends TestCase
 
     public function setUp(): void
     {
-        $this->filesystem = $this->prophesize('League\Flysystem\FilesystemInterface');
+        $this->filesystem = $this->prophesize('TSLeague\Flysystem\FilesystemInterface');
         $this->plugin = new ForcedRename();
         $this->plugin->setFilesystem($this->filesystem->reveal());
     }
@@ -29,7 +29,7 @@ class ForcedRenamePluginTests extends TestCase
     public function testPluginDeleteNotExists()
     {
         $this->filesystem->delete('newpath')
-            ->willThrow('League\Flysystem\FileNotFoundException', 'newpath')
+            ->willThrow('TSLeague\Flysystem\FileNotFoundException', 'newpath')
             ->shouldBeCalled();
 
         $this->filesystem->rename('path', 'newpath')->willReturn(true)->shouldBeCalled();

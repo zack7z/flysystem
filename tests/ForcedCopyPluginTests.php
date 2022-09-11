@@ -1,6 +1,6 @@
 <?php
 
-use League\Flysystem\Plugin\ForcedCopy;
+use TSLeague\Flysystem\Plugin\ForcedCopy;
 use PHPUnit\Framework\TestCase;
 
 class ForcedCopyPluginTests extends TestCase
@@ -11,7 +11,7 @@ class ForcedCopyPluginTests extends TestCase
 
     public function setUp(): void
     {
-        $this->filesystem = $this->prophesize('League\Flysystem\FilesystemInterface');
+        $this->filesystem = $this->prophesize('TSLeague\Flysystem\FilesystemInterface');
         $this->plugin = new ForcedCopy();
         $this->plugin->setFilesystem($this->filesystem->reveal());
     }
@@ -29,7 +29,7 @@ class ForcedCopyPluginTests extends TestCase
     public function testPluginDeleteNotExists()
     {
         $this->filesystem->delete('newpath')
-            ->willThrow('League\Flysystem\FileNotFoundException', 'newpath')
+            ->willThrow('TSLeague\Flysystem\FileNotFoundException', 'newpath')
             ->shouldBeCalled();
 
         $this->filesystem->copy('path', 'newpath')->willReturn(true)->shouldBeCalled();

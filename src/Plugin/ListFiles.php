@@ -1,6 +1,6 @@
 <?php
 
-namespace League\Flysystem\Plugin;
+namespace TSLeague\Flysystem\Plugin;
 
 class ListFiles extends AbstractPlugin
 {

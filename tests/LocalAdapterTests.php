@@ -1,10 +1,10 @@
 <?php
 
-namespace League\Flysystem\Adapter;
+namespace TSLeague\Flysystem\Adapter;
 
-use League\Flysystem\Config;
-use League\Flysystem\Exception;
-use League\Flysystem\NotSupportedException;
+use TSLeague\Flysystem\Config;
+use TSLeague\Flysystem\Exception;
+use TSLeague\Flysystem\NotSupportedException;
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
 
@@ -544,7 +544,7 @@ class LocalAdapterTests extends TestCase
 
     public function testUnreadableFilesCauseAnError()
     {
-        $this->expectException('League\Flysystem\UnreadableFileException');
+        $this->expectException('TSLeague\Flysystem\UnreadableFileException');
 
         $adapter = new Local($this->root, LOCK_EX, Local::SKIP_LINKS);
         $reflection = new \ReflectionClass($adapter);

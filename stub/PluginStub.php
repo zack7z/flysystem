@@ -1,9 +1,9 @@
 <?php
 
-namespace League\Flysystem\Stub;
+namespace TSLeague\Flysystem\Stub;
 
-use League\Flysystem\FilesystemInterface;
-use League\Flysystem\PluginInterface;
+use TSLeague\Flysystem\FilesystemInterface;
+use TSLeague\Flysystem\PluginInterface;
 
 class PluginStub implements PluginInterface
 {

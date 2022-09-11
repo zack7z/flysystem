@@ -1,9 +1,9 @@
 <?php
 
-namespace League\Flysystem\Adapter;
+namespace TSLeague\Flysystem\Adapter;
 
-use League\Flysystem\Config;
-use League\Flysystem\Stub\StreamedWritingStub;
+use TSLeague\Flysystem\Config;
+use TSLeague\Flysystem\Stub\StreamedWritingStub;
 use PHPUnit\Framework\TestCase;
 
 class StreamedWritingPolyfillTests extends TestCase

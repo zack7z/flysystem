@@ -1,9 +1,9 @@
 <?php
 
-namespace League\Flysystem\Adapter;
+namespace TSLeague\Flysystem\Adapter;
 
-use League\Flysystem\Util;
-use League\Flysystem\Util\ContentListingFormatter;
+use TSLeague\Flysystem\Util;
+use TSLeague\Flysystem\Util\ContentListingFormatter;
 use PHPUnit\Framework\TestCase;
 
 class ContentListingFormatterTest extends TestCase

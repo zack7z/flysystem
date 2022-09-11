@@ -1,8 +1,8 @@
 <?php
 
-namespace League\Flysystem\Adapter;
+namespace TSLeague\Flysystem\Adapter;
 
-use League\Flysystem\AdapterInterface;
+use TSLeague\Flysystem\AdapterInterface;
 
 abstract class AbstractAdapter implements AdapterInterface
 {

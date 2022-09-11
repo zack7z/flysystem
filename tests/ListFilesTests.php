@@ -1,6 +1,6 @@
 <?php
 
-use League\Flysystem\Plugin\ListFiles;
+use TSLeague\Flysystem\Plugin\ListFiles;
 use PHPUnit\Framework\TestCase;
 
 class ListFilesTests extends TestCase
@@ -14,7 +14,7 @@ class ListFilesTests extends TestCase
      */
     public function setupFilesystem()
     {
-        $this->filesystem = $this->prophesize('League\Flysystem\FilesystemInterface');
+        $this->filesystem = $this->prophesize('TSLeague\Flysystem\FilesystemInterface');
         $this->actualFilesystem = $this->filesystem->reveal();
     }
 

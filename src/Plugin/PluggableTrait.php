@@ -1,10 +1,10 @@
 <?php
 
-namespace League\Flysystem\Plugin;
+namespace TSLeague\Flysystem\Plugin;
 
 use BadMethodCallException;
-use League\Flysystem\FilesystemInterface;
-use League\Flysystem\PluginInterface;
+use TSLeague\Flysystem\FilesystemInterface;
+use TSLeague\Flysystem\PluginInterface;
 use LogicException;
 
 trait PluggableTrait

@@ -1,10 +1,10 @@
 <?php
 
-namespace League\Flysystem\Adapter;
+namespace TSLeague\Flysystem\Adapter;
 
-use League\Flysystem\Adapter\Polyfill\StreamedCopyTrait;
-use League\Flysystem\Adapter\Polyfill\StreamedTrait;
-use League\Flysystem\Config;
+use TSLeague\Flysystem\Adapter\Polyfill\StreamedCopyTrait;
+use TSLeague\Flysystem\Adapter\Polyfill\StreamedTrait;
+use TSLeague\Flysystem\Config;
 
 class NullAdapter extends AbstractAdapter
 {

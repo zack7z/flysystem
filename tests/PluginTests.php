@@ -1,10 +1,10 @@
 <?php
 
-use League\Flysystem\Adapter\Local;
-use League\Flysystem\File;
-use League\Flysystem\Filesystem;
-use League\Flysystem\FilesystemInterface;
-use League\Flysystem\PluginInterface;
+use TSLeague\Flysystem\Adapter\Local;
+use TSLeague\Flysystem\File;
+use TSLeague\Flysystem\Filesystem;
+use TSLeague\Flysystem\FilesystemInterface;
+use TSLeague\Flysystem\PluginInterface;
 use PHPUnit\Framework\TestCase;
 
 class MyPlugin implements PluginInterface

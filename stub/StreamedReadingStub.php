@@ -1,8 +1,8 @@
 <?php
 
-namespace League\Flysystem\Stub;
+namespace TSLeague\Flysystem\Stub;
 
-use League\Flysystem\Adapter\Polyfill\StreamedReadingTrait;
+use TSLeague\Flysystem\Adapter\Polyfill\StreamedReadingTrait;
 
 class StreamedReadingStub
 {

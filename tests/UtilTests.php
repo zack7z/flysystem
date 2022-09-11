@@ -1,6 +1,6 @@
 <?php
 
-namespace League\Flysystem;
+namespace TSLeague\Flysystem;
 
 use LogicException;
 use PHPUnit\Framework\TestCase;
@@ -89,9 +89,9 @@ class UtilTests extends TestCase
 
     public function testEnsureConfig()
     {
-        $this->assertInstanceOf('League\Flysystem\Config', Util::ensureConfig([]));
-        $this->assertInstanceOf('League\Flysystem\Config', Util::ensureConfig(null));
-        $this->assertInstanceOf('League\Flysystem\Config', Util::ensureConfig(new Config()));
+        $this->assertInstanceOf('TSLeague\Flysystem\Config', Util::ensureConfig([]));
+        $this->assertInstanceOf('TSLeague\Flysystem\Config', Util::ensureConfig(null));
+        $this->assertInstanceOf('TSLeague\Flysystem\Config', Util::ensureConfig(new Config()));
     }
 
     public function testInvalidValueEnsureConfig()

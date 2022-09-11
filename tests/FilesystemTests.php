@@ -1,9 +1,9 @@
 <?php
 
-use League\Flysystem\Config;
-use League\Flysystem\FileNotFoundException;
-use League\Flysystem\Filesystem;
-use League\Flysystem\Util;
+use TSLeague\Flysystem\Config;
+use TSLeague\Flysystem\FileNotFoundException;
+use TSLeague\Flysystem\Filesystem;
+use TSLeague\Flysystem\Util;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 use Prophecy\Argument\Token\TypeToken;
@@ -269,7 +269,7 @@ class FilesystemTests extends TestCase
 
     public function testDeleteDirRootViolation()
     {
-        $this->expectException('League\Flysystem\RootViolationException');
+        $this->expectException('TSLeague\Flysystem\RootViolationException');
         $this->filesystem->deleteDir('');
     }
 
@@ -343,14 +343,14 @@ class FilesystemTests extends TestCase
 
     public function testAssertPresentThrowsException()
     {
-        $this->expectException('League\Flysystem\FileExistsException');
+        $this->expectException('TSLeague\Flysystem\FileExistsException');
         $this->prophecy->has('path.txt')->willReturn(true);
         $this->filesystem->write('path.txt', 'contents');
     }
 
     public function testAssertAbsentThrowsException()
     {
-        $this->expectException('League\Flysystem\FileNotFoundException');
+        $this->expectException('TSLeague\Flysystem\FileNotFoundException');
         $this->prophecy->has('path.txt')->willReturn(false);
         $this->filesystem->read('path.txt');
     }
@@ -390,7 +390,7 @@ class FilesystemTests extends TestCase
         ]);
 
         $output = $this->filesystem->get($path);
-        $this->assertInstanceOf('League\Flysystem\File', $output);
+        $this->assertInstanceOf('TSLeague\Flysystem\File', $output);
     }
 
     public function testGetDirectory()
@@ -403,7 +403,7 @@ class FilesystemTests extends TestCase
         ]);
 
         $output = $this->filesystem->get($path);
-        $this->assertInstanceOf('League\Flysystem\Directory', $output);
+        $this->assertInstanceOf('TSLeague\Flysystem\Directory', $output);
     }
 
     public function testListContents()

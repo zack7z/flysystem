@@ -1,9 +1,9 @@
 <?php
 
-use League\Flysystem\Adapter\Local;
-use League\Flysystem\AdapterInterface;
-use League\Flysystem\Filesystem;
-use League\Flysystem\FilesystemInterface;
+use TSLeague\Flysystem\Adapter\Local;
+use TSLeague\Flysystem\AdapterInterface;
+use TSLeague\Flysystem\Filesystem;
+use TSLeague\Flysystem\FilesystemInterface;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Argument;
 
@@ -13,9 +13,9 @@ class FlysystemStreamTests extends TestCase
     public function testWriteStream()
     {
         $stream = tmpfile();
-        $adapter = $this->prophesize('League\Flysystem\AdapterInterface');
+        $adapter = $this->prophesize('TSLeague\Flysystem\AdapterInterface');
         $adapter->has('file.txt')->willReturn(false)->shouldBeCalled();
-        $adapter->writeStream('file.txt', $stream, Argument::type('League\Flysystem\Config'))
+        $adapter->writeStream('file.txt', $stream, Argument::type('TSLeague\Flysystem\Config'))
             ->willReturn(['path' => 'file.txt'], false)
             ->shouldBeCalled();
         $filesystem = new Filesystem($adapter->reveal());
@@ -33,10 +33,10 @@ class FlysystemStreamTests extends TestCase
     public function testUpdateStream()
     {
         $stream = tmpfile();
-        $adapter = $this->prophesize('League\Flysystem\AdapterInterface');
+        $adapter = $this->prophesize('TSLeague\Flysystem\AdapterInterface');
         $adapter->has('file.txt')->willReturn(true)->shouldBeCalled();
 
-        $adapter->updateStream('file.txt', $stream, Argument::type('League\Flysystem\Config'))
+        $adapter->updateStream('file.txt', $stream, Argument::type('TSLeague\Flysystem\Config'))
             ->willReturn(['path' => 'file.txt'], false)
             ->shouldBeCalled();
 
@@ -55,7 +55,7 @@ class FlysystemStreamTests extends TestCase
 
     public function testReadStream()
     {
-        $adapter = $this->prophesize('League\Flysystem\AdapterInterface');
+        $adapter = $this->prophesize('TSLeague\Flysystem\AdapterInterface');
         $adapter->has(Argument::type('string'))->willReturn(true)->shouldBeCalled();
         $stream = tmpfile();
         $adapter->readStream('file.txt')->willReturn(['stream' => $stream])->shouldBeCalled();

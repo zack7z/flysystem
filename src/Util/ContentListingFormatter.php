@@ -1,8 +1,8 @@
 <?php
 
-namespace League\Flysystem\Util;
+namespace TSLeague\Flysystem\Util;
 
-use League\Flysystem\Util;
+use TSLeague\Flysystem\Util;
 
 /**
  * @internal

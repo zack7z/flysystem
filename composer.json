@@ -31,12 +31,12 @@
     },
     "autoload": {
         "psr-4": {
-            "League\\Flysystem\\": "src/"
+            "TSLeague\\Flysystem\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "League\\Flysystem\\Stub\\": "stub/"
+            "TSLeague\\Flysystem\\Stub\\": "stub/"
         }
     },
     "suggest": {

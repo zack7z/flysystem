@@ -1,6 +1,6 @@
 <?php
 
-namespace League\Flysystem;
+namespace TSLeague\Flysystem;
 
 use PHPUnit\Framework\TestCase;
 
@@ -133,7 +133,7 @@ class FileTests extends TestCase
 
     public function testRenameFails()
     {
-        $adapter = $this->prophesize('League\Flysystem\AdapterInterface');
+        $adapter = $this->prophesize('TSLeague\Flysystem\AdapterInterface');
         $adapter->has('file.txt')->willReturn(true)->shouldBeCalled();
         $adapter->has('files/renamed.txt')->willReturn(false)->shouldBeCalled();
         $adapter->rename('file.txt', 'files/renamed.txt')->willReturn(false)->shouldBeCalled();
@@ -158,7 +158,7 @@ class FileTests extends TestCase
 
     public function testCopyFails()
     {
-        $adapter = $this->prophesize('League\Flysystem\AdapterInterface');
+        $adapter = $this->prophesize('TSLeague\Flysystem\AdapterInterface');
         $adapter->has('file.txt')->willReturn(true)->shouldBeCalled();
         $adapter->has('files/copied.txt')->willReturn(false)->shouldBeCalled();
         $adapter->copy('file.txt', 'files/copied.txt')->willReturn(false)->shouldBeCalled();

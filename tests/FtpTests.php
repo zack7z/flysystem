@@ -1,11 +1,11 @@
 <?php
 
-namespace League\Flysystem\Adapter;
+namespace TSLeague\Flysystem\Adapter;
 
 use DateTime;
 use ErrorException;
-use League\Flysystem\Config;
-use League\Flysystem\NotSupportedException;
+use TSLeague\Flysystem\Config;
+use TSLeague\Flysystem\NotSupportedException;
 use LogicException;
 use PHPUnit\Framework\TestCase;
 use RuntimeException;

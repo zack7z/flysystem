@@ -1,15 +1,15 @@
 <?php
 
-namespace League\Flysystem\Adapter;
+namespace TSLeague\Flysystem\Adapter;
 
 use DirectoryIterator;
 use FilesystemIterator;
 use finfo as Finfo;
-use League\Flysystem\Config;
-use League\Flysystem\Exception;
-use League\Flysystem\NotSupportedException;
-use League\Flysystem\UnreadableFileException;
-use League\Flysystem\Util;
+use TSLeague\Flysystem\Config;
+use TSLeague\Flysystem\Exception;
+use TSLeague\Flysystem\NotSupportedException;
+use TSLeague\Flysystem\UnreadableFileException;
+use TSLeague\Flysystem\Util;
 use LogicException;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;

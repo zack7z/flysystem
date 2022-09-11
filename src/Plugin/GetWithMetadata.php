@@ -1,9 +1,9 @@
 <?php
 
-namespace League\Flysystem\Plugin;
+namespace TSLeague\Flysystem\Plugin;
 
 use InvalidArgumentException;
-use League\Flysystem\FileNotFoundException;
+use TSLeague\Flysystem\FileNotFoundException;
 
 class GetWithMetadata extends AbstractPlugin
 {

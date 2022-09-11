@@ -1,7 +1,7 @@
 <?php
 
-use League\Flysystem\Directory;
-use League\Flysystem\File;
+use TSLeague\Flysystem\Directory;
+use TSLeague\Flysystem\File;
 use PHPUnit\Framework\TestCase;
 
 class HandlerTests extends TestCase
@@ -9,7 +9,7 @@ class HandlerTests extends TestCase
 
     public function testFileRead()
     {
-        $prophecy = $this->prophesize('League\Flysystem\FilesystemInterface');
+        $prophecy = $this->prophesize('TSLeague\Flysystem\FilesystemInterface');
         $prophecy->read('path.txt')->willReturn('contents');
         $filesystem = $prophecy->reveal();
         $file = new File(null, 'path.txt');
@@ -20,7 +20,7 @@ class HandlerTests extends TestCase
 
     public function testFileDelete()
     {
-        $prophecy = $this->prophesize('League\Flysystem\FilesystemInterface');
+        $prophecy = $this->prophesize('TSLeague\Flysystem\FilesystemInterface');
         $prophecy->delete('path.txt')->willReturn(true);
         $filesystem = $prophecy->reveal();
         $file = new File(null, 'path.txt');
@@ -31,7 +31,7 @@ class HandlerTests extends TestCase
 
     public function testFileReadStream()
     {
-        $prophecy = $this->prophesize('League\Flysystem\FilesystemInterface');
+        $prophecy = $this->prophesize('TSLeague\Flysystem\FilesystemInterface');
         $prophecy->readStream('path.txt')->willReturn('contents');
         $filesystem = $prophecy->reveal();
         $file = new File(null, 'path.txt');
@@ -42,7 +42,7 @@ class HandlerTests extends TestCase
 
     public function testFileUpdate()
     {
-        $prophecy = $this->prophesize('League\Flysystem\FilesystemInterface');
+        $prophecy = $this->prophesize('TSLeague\Flysystem\FilesystemInterface');
         $prophecy->update('path.txt', 'contents')->willReturn(true);
         $filesystem = $prophecy->reveal();
         $file = new File(null, 'path.txt');
@@ -53,7 +53,7 @@ class HandlerTests extends TestCase
 
     public function testFileUpdateStream()
     {
-        $prophecy = $this->prophesize('League\Flysystem\FilesystemInterface');
+        $prophecy = $this->prophesize('TSLeague\Flysystem\FilesystemInterface');
         $prophecy->updateStream('path.txt', 'contents')->willReturn(true);
         $filesystem = $prophecy->reveal();
         $file = new File(null, 'path.txt');
@@ -81,7 +81,7 @@ class HandlerTests extends TestCase
      */
     public function testGetters($method, $response)
     {
-        $prophecy = $this->prophesize('League\Flysystem\FilesystemInterface');
+        $prophecy = $this->prophesize('TSLeague\Flysystem\FilesystemInterface');
         $prophecy->{$method}('path.txt')->willReturn($response);
         $filesystem = $prophecy->reveal();
         $file = new File(null, 'path.txt');
@@ -93,7 +93,7 @@ class HandlerTests extends TestCase
     public function testFileIsFile()
     {
         $response = ['type' => 'file'];
-        $prophecy = $this->prophesize('League\Flysystem\FilesystemInterface');
+        $prophecy = $this->prophesize('TSLeague\Flysystem\FilesystemInterface');
         $prophecy->getMetadata('path.txt')->willReturn($response);
         $filesystem = $prophecy->reveal();
         $file = new File(null, 'path.txt');
@@ -104,7 +104,7 @@ class HandlerTests extends TestCase
     public function testFileIsDir()
     {
         $response = ['type' => 'file'];
-        $prophecy = $this->prophesize('League\Flysystem\FilesystemInterface');
+        $prophecy = $this->prophesize('TSLeague\Flysystem\FilesystemInterface');
         $prophecy->getMetadata('path.txt')->willReturn($response);
         $filesystem = $prophecy->reveal();
         $file = new File();
@@ -122,7 +122,7 @@ class HandlerTests extends TestCase
 
     public function testDirDelete()
     {
-        $prophecy = $this->prophesize('League\Flysystem\FilesystemInterface');
+        $prophecy = $this->prophesize('TSLeague\Flysystem\FilesystemInterface');
         $prophecy->deleteDir('path')->willReturn(true);
         $filesystem = $prophecy->reveal();
         $dir = new Directory(null, 'path');
@@ -133,7 +133,7 @@ class HandlerTests extends TestCase
 
     public function testDirListContents()
     {
-        $prophecy = $this->prophesize('League\Flysystem\FilesystemInterface');
+        $prophecy = $this->prophesize('TSLeague\Flysystem\FilesystemInterface');
         $prophecy->listContents('path', true)->willReturn($listing = ['listing']);
         $filesystem = $prophecy->reveal();
         $dir = new Directory(null, 'path');
@@ -144,7 +144,7 @@ class HandlerTests extends TestCase
 
     public function testGetFilesystem()
     {
-        $prophecy = $this->prophesize('League\Flysystem\FilesystemInterface');
+        $prophecy = $this->prophesize('TSLeague\Flysystem\FilesystemInterface');
         $filesystem = $prophecy->reveal();
         $dir = new Directory(null, 'path');
         $dir->setFilesystem($filesystem);

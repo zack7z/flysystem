@@ -1,6 +1,6 @@
 <?php
 
-use League\Flysystem\Plugin\GetWithMetadata;
+use TSLeague\Flysystem\Plugin\GetWithMetadata;
 use PHPUnit\Framework\TestCase;
 
 class GetWithMetadataTests extends TestCase
@@ -21,7 +21,7 @@ class GetWithMetadataTests extends TestCase
      */
     public function setupFilesystem()
     {
-        $this->prophecy = $this->prophesize('League\Flysystem\FilesystemInterface');
+        $this->prophecy = $this->prophesize('TSLeague\Flysystem\FilesystemInterface');
         $this->filesystem = $this->prophecy->reveal();
     }
 

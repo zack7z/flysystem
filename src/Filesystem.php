@@ -1,11 +1,11 @@
 <?php
 
-namespace League\Flysystem;
+namespace TSLeague\Flysystem;
 
 use InvalidArgumentException;
-use League\Flysystem\Adapter\CanOverwriteFiles;
-use League\Flysystem\Plugin\PluggableTrait;
-use League\Flysystem\Util\ContentListingFormatter;
+use TSLeague\Flysystem\Adapter\CanOverwriteFiles;
+use TSLeague\Flysystem\Plugin\PluggableTrait;
+use TSLeague\Flysystem\Util\ContentListingFormatter;
 
 /**
  * @method void        emptyDir(string $dirname)

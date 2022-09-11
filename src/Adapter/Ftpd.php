@@ -1,6 +1,6 @@
 <?php
 
-namespace League\Flysystem\Adapter;
+namespace TSLeague\Flysystem\Adapter;
 
 class Ftpd extends Ftp
 {

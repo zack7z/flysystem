@@ -1,8 +1,8 @@
 <?php
 
-namespace League\Flysystem\Adapter;
+namespace TSLeague\Flysystem\Adapter;
 
-use League\Flysystem\Stub\StreamedReadingStub;
+use TSLeague\Flysystem\Stub\StreamedReadingStub;
 use PHPUnit\Framework\TestCase;
 
 class StreamedReadingTraitTests extends TestCase
